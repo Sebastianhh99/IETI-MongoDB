@@ -4,6 +4,7 @@ import org.ada.school.dto.UserDto;
 
 import org.ada.school.repository.UserDocument;
 
+import java.util.Date;
 import java.util.List;
 
 public class UserServiceHashMap
@@ -58,6 +59,16 @@ public class UserServiceHashMap
         {
             return null;
         }*/
+        return null;
+    }
+
+    @Override
+    public List<UserDocument> findUserWithNameOrLastNameLike(String queryText) {
+        return null;
+    }
+
+    @Override
+    public List<UserDocument> findUsersCreatedAfter(Date startDate) {
         return null;
     }
 

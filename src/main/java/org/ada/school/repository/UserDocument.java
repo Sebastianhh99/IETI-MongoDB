@@ -27,6 +27,7 @@ public class UserDocument {
         name=userDto.getName();
         email=userDto.getEmail();
         lastName=userDto.getLastName();
+        createdAt= new Date();
     }
 
     public void update(UserDto userDto){

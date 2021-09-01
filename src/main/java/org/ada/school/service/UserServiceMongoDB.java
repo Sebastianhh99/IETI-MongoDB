@@ -1,5 +1,6 @@
 package org.ada.school.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.ada.school.dto.UserDto;
@@ -50,6 +51,16 @@ public class UserServiceMongoDB implements UserService{
             return user;
         }
         return null;
+    }
+
+    @Override
+    public List<UserDocument> findUserWithNameOrLastNameLike(String queryText) {
+        return userRepository.findByNameOrLastNameLike(queryText,queryText);
+    }
+
+    @Override
+    public List<UserDocument> findUsersCreatedAfter(Date startDate) {
+        return userRepository.findByCreatedAtAfter(startDate);
     }
     
 }
